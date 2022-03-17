@@ -3,14 +3,12 @@ import { save, load } from 'redux-localstorage-simple'
 import cloneDeep from 'lodash/cloneDeep'
 import { useDispatch } from 'react-redux'
 import farmsReducer from './farms'
-import stakesReducer from './stakes'
 import poolsReducer from './pools'
 import predictionsReducer from './predictions'
 import profileReducer, { initialState as profileInitialState } from './profile'
 import teamsReducer from './teams'
 import achievementsReducer from './achievements'
 import blockReducer from './block'
-import votingReducer from './voting'
 import lotteryReducer from './lottery'
 import infoReducer from './info'
 import { updateVersion } from './global/actions'
@@ -31,12 +29,10 @@ const store = configureStore({
     achievements: achievementsReducer,
     block: blockReducer,
     farms: farmsReducer,
-    stakes: stakesReducer,
     pools: poolsReducer,
     predictions: predictionsReducer,
     profile: profileReducer,
     teams: teamsReducer,
-    voting: votingReducer,
     lottery: lotteryReducer,
     info: infoReducer,
     nftMarket: nftMarketReducer,
